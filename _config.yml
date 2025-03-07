@@ -1,0 +1,12 @@
+# Site settings
+title: K.D.EarthMovers
+email: contact@kdearthmovers.com
+description: Eearthmoving Heavy Machinery on Rent
+baseurl: "/"
+url: "https://kdearthmovers.com" # the base hostname & protocol for your site
+
+twitter_username:
+github_username:
+
+# Build settings
+markdown: kramdown
