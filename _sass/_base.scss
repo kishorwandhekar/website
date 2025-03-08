@@ -75,13 +75,13 @@ aside {
     @include sans-serif-font;
     @include transition-all;
     .navbar-header .navbar-brand {
-        color: $theme-primary;
+        color: black; // $theme-primary;
         @include sans-serif-font;
         font-weight: 700;
         text-transform: uppercase;
         &:hover,
         &:focus {
-            color: darken($theme-primary, 10%);
+            color: black; // darken($theme-primary, 10%);
         }
     }
     .nav {
@@ -112,15 +112,15 @@ aside {
         background-color: transparent;
         border-color: rgba(white, .3);
         .navbar-header .navbar-brand {
-            color: rgba(white, .7);
+            color: black; // rgba(white, .7);
             &:hover,
             &:focus {
-                color: white;
+                color: black;
             }
         }
         .nav > li > a,
         .nav > li > a:focus {
-            color: rgba(white, .7);
+            color: black; // rgba(white, .7);
             &:hover {
                 color: white;
             }
@@ -150,59 +150,59 @@ aside {
 // Homepage Header
 
 header {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  @include background-cover;
+  background-position: center;
+  background-image: url('../img/pexels-apasaric-1437493.jpg');
+  text-align: center;
+  color: black;
+  .header-content {
     position: relative;
-    width: 100%;
-    min-height: auto;
-    @include background-cover;
-    background-position: center;
-    background-image: url('../img/header.jpg');
     text-align: center;
-    color: white;
+    padding: 100px 15px 100px;
+    width: 100%;
+    .header-content-inner {
+      h1 {
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      hr {
+        margin: 30px auto;
+      }
+      p {
+        font-weight: 300;
+        color: black; // rgba(white, .7);
+        font-size: 16px;
+        margin-bottom: 50px;
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    min-height: 100%;
     .header-content {
-        position: relative;
-        text-align: center;
-        padding: 100px 15px 100px;
-        width: 100%;
-        .header-content-inner {
-            h1 {
-                font-weight: 700;
-                text-transform: uppercase;
-                margin-top: 0;
-                margin-bottom: 0;
-            }
-            hr {
-                margin: 30px auto;
-            }
-            p {
-                font-weight: 300;
-                color: rgba(white, .7);
-                font-size: 16px;
-                margin-bottom: 50px;
-            }
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      padding: 0 50px;
+      .header-content-inner {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        p {
+          font-size: 18px;
+          max-width: 80%;
+          margin-left: auto;
+          margin-right: auto;
         }
+      }
     }
-    @media (min-width: 768px) {
-        min-height: 100%;
-        .header-content {
-            position: absolute;
-            top: 50%;
-            -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-            padding: 0 50px;
-            .header-content-inner {
-                max-width: 1000px;
-                margin-left: auto;
-                margin-right: auto;
-                p {
-                    font-size: 18px;
-                    max-width: 80%;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-            }
-        }
-    }
+  }
 }
 
 // Sections
