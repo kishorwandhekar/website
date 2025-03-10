@@ -157,7 +157,7 @@ header {
   background-position: center;
   background-image: url('../img/pexels-apasaric-1437493.jpg');
   text-align: center;
-  color: black;
+  
   .header-content {
     position: relative;
     text-align: center;
@@ -165,7 +165,7 @@ header {
     width: 100%;
     .header-content-inner {
       h1 {
-        font-weight: 700;
+        color: black; /* White text for maximum contrast */
         text-transform: uppercase;
         margin-top: 0;
         margin-bottom: 0;
@@ -220,6 +220,9 @@ header {
     p {
         margin-bottom: 0;
     }
+  img {
+    width: 30%;
+  }
 }
 
 .portfolio-box {
@@ -348,4 +351,3 @@ img::-moz-selection {
 body {
     -webkit-tap-highlight-color: $theme-dark;
 }
-
